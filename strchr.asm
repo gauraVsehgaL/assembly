@@ -11,7 +11,7 @@ EXTRN	_strlen:PROC
 
 _TEXT SEGMENT
 
-mystrlen PROC
+mystrchr PROC
 
 push ebp
 mov ebp,esp
@@ -30,12 +30,12 @@ mov esp,ebp
 pop ebp
 ret
 
-mystrlen ENDP
+mystrchr ENDP
 
 _main PROC
 PUSH 104 ;search for 'h'
 PUSH OFFSET $SG2657
-call mystrlen
+call mystrchr
 add esp, 8
 ret 0
 _main ENDP
